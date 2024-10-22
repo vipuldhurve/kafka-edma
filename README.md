@@ -3,9 +3,9 @@
 This project demonstrates a Kafka-based event-driven microservices architecture using Spring Boot. It enables communication between microservices via Kafka topics, ensuring decoupled, scalable, and asynchronous message processing.
 
 ## Key Features
-- Apache Kafka: Acts as a message broker to enable communication between microservices.
-- Spring Boot: Provides a robust framework for building microservices.
-- Event-Driven Architecture: Utilizes Kafka topics for asynchronous communication.
+- <b>Apache Kafka:</b> Acts as a message broker to enable communication between microservices.
+- <b>Spring Boot:</b> Provides a robust framework for building microservices.
+- <b>Event-Driven Architecture:</b> Utilizes Kafka topics for asynchronous communication.
   
 ## Prerequisites
 Before starting the project, ensure the following software is installed on your machine:
@@ -45,15 +45,15 @@ git clone <repository-url>
 ```bash
 mvn clean install
 ```
-2. <b>Configure Kafka in Spring Boot:</b> Ensure the following properties are set in your Spring Boot application’s application.properties or application.yml file:
-   #### Kafka properties
+2. <b>Configure Kafka in Spring Boot:</b> Ensure the following properties are set in your Spring Boot application’s application.properties or application.yml file<br><br>
+   <i>Kafka properties:</i>
    - `spring.kafka.bootstrap-servers=localhost:9092`
    - `spring.kafka.consumer.group-id=group_id`
    - `spring.kafka.consumer.auto-offset-reset=earliest`
    - `spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer`
    - `spring.kafka.producer.value-serializer=org.springframework.kafka.support.serializer.JsonSerializer`
    - `spring.kafka.consumer.key-deserializer=org.apache.kafka.common.serialization.StringDeserializer`
-   - `spring.kafka.consumer.value-deserializer=org.springframework.kafka.support.serializer.JsonDeserializer` <br>
+   - `spring.kafka.consumer.value-deserializer=org.springframework.kafka.support.serializer.JsonDeserializer` <br><br>
 3. <b>Running the Application:</b> To start the Spring Boot microservices, use the following command
 ```bash
 mvn spring-boot:run
@@ -69,8 +69,8 @@ mvn spring-boot:run
 - ZooKeeper Version: Bundled with Kafka
 
 ## Troubleshooting
-- Kafka Broker not connecting: Ensure ZooKeeper is running and Kafka is correctly configured to use localhost:9092.
-- Message Not Consumed: Check consumer group ID and ensure the topic is correctly set in the application properties.
+- <b>Kafka Broker not connecting:</b> Ensure ZooKeeper is running and Kafka is correctly configured to use localhost:9092.
+- <b>Message Not Consumed:</b> Check consumer group ID and ensure the topic is correctly set in the application properties.
   
 ## Conclusion
 This documentation provides the necessary steps to set up a Kafka event-driven microservices architecture using Spring Boot. The project demonstrates how to produce and consume messages asynchronously, promoting loose coupling between services.
